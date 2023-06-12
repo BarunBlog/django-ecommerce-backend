@@ -42,6 +42,7 @@ INSTALLED_APPS = [
 
     # local apps
     'user',
+    'product',
 
     # Third party app
     'rest_framework',
@@ -126,7 +127,8 @@ REST_FRAMEWORK = {
         'rest_framework.parsers.MultiPartParser',
     ),
 
-    # 'DEFAULT_FILTER_BACKENDS': ('django_filters.rest_framework.DjangoFilterBackend',),
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
+    'PAGE_SIZE': 10
 
 }
 
@@ -177,6 +179,17 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
+
+# defines the location of static files in local development
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+
+# location of static files for production
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+
+# Media file handling
+MEDIA_URL = '/media/' # new
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
