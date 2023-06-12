@@ -43,10 +43,12 @@ INSTALLED_APPS = [
     # local apps
     'user',
     'product',
+    'cart',
 
     # Third party app
     'rest_framework',
     'rest_framework_simplejwt.token_blacklist',
+    'rangefilter',
 ]
 
 MIDDLEWARE = [
