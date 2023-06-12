@@ -1,0 +1,10 @@
+*.pyc
+.pyc
+*~
+/.vscode
+__pycache__
+myvenv
+venv
+.DS_Store
+.idea
+.env
