@@ -22,11 +22,6 @@ docker-start: |
 runserver: |
 	python manage.py runserver 0.0.0.0:8000
 
-generate-model:
-	python3 manage.py inspectdb --database hatecholo_db > admin_app/temp_models.py
-
-migrate:
-	python3 manage.py migrate --database admin_db
-
-createsuperuser:
-	python3 manage.py createsuperuser --database admin_db
+migrate_and_runserver: |
+	python manage.py migrate
+	python manage.py runserver 0.0.0.0:8000
