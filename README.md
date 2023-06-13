@@ -1,4 +1,4 @@
-# django-ecommerce-backend
+# Django-Ecommerce-Backend
 This is the backend component of an E-commerce application built with Django.
 
 # Prerequisites
@@ -34,6 +34,10 @@ This command will build and start the Docker containers required for the project
 
 # Admin Interface:
 The admin panel can be accessed at http://localhost:8000/admin/
+
+# Create Super User
+To visit the admin interface you need to create a superuser account from the docker cli
+``` python manage.py createsuperuser ```
 
 
 # Usage
