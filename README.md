@@ -32,6 +32,10 @@ You need to create stripe account to get API Keys.
 
 This command will build and start the Docker containers required for the project.
 
+# Admin Interface:
+The admin panel can be accessed at http://localhost:8000/admin/
+
+
 # Usage
 Accessing the API: The API can be accessed at http://localhost:8000/api/.
 
