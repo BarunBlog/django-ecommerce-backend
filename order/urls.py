@@ -1,5 +1,6 @@
 from .views import (
-    CheckoutView
+    CheckoutView,
+    PaymentView
 )
 
 from django.urls import path
@@ -7,5 +8,6 @@ from django.urls import path
 
 urlpatterns = [
     path('checkout/', CheckoutView.as_view(), name="checkout"),
+    path('payment/', PaymentView.as_view(), name="payment"),
 ]
 
