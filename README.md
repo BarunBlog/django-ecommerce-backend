@@ -1,4 +1,4 @@
-## django-ecommerce-backend
+# django-ecommerce-backend
 This is the backend component of an E-commerce application built with Django.
 
 # Prerequisites
