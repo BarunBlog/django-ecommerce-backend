@@ -27,6 +27,11 @@ class AddToCartView(APIView):
             except Product.DoesNotExist:
                 return Response({"message": "invalid product_id"}, status=status.HTTP_400_BAD_REQUEST)
 
+            # check if we have enough products in stock
+            if int(quantity) > product.stock:
+                return Response({"message": f"Insufficient stock for the product {product.id}"},
+                                status=status.HTTP_400_BAD_REQUEST)
+
             # check if the user has a cart, if not then create a new one
             cart, created = Cart.objects.get_or_create(user=request.user)
 
